@@ -1,3 +1,5 @@
+import os
+
 #Functions
 def line_to_array(line):
     values = []
@@ -26,7 +28,7 @@ def C(g1,g2):
     temp = []
     for i in range(len(g1)):
         for j in range(len(g2)):
-            element = "{" + g1[i] + "," + g2[j] + "}"
+            element = "(" + g1[i] + "," + g2[j] + ")"
             temp.append(element)
     return temp
     
@@ -43,9 +45,28 @@ def print_group(g, header):
             print(",", end="")
     print("}", end="")
 
+filedir = "demofile.txt"
+valid = False
 
-f = open("demofile.txt", "r")
+while not valid:
+    print("Welcome! Please enter the name of the file you want to input without the (.txt) extension.")
+    print("An empty field will default to 'demofile'!")
+    temp_input = str(input(">")).replace(" ","")
+    if temp_input == "": #Check for Empty
+        valid = True
+        break
+    temp_input += ".txt"
+    if os.path.isfile(temp_input):
+        filedir = temp_input
+        valid = True
+    else:
+        print("Error! The file \'" + temp_input + "\' could not be found!")
 
+
+f = open(filedir, "r")
+
+
+print("Showing results for \"" + filedir + "\"...")
 #Treat lines
 lines = []
 lines = f.read().split("\n")
