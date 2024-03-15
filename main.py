@@ -90,8 +90,8 @@ group1 = []
 group2 = []
 
 while(i < len(lines) and result_count < to_execute):
-    if operator == ""  and operator in "UIDC":
-        operator = lines[i]
+    if operator == ""  and operator.capitalize() in "UIDC":
+        operator = lines[i].capitalize()
     else:
         if len(group1) == 0:
             group1 = line_to_array(lines[i])

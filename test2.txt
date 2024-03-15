@@ -1,0 +1,10 @@
+3
+D
+HOI4, COH2, SC2
+HOI4, EU4, CK3, Stellaris
+I
+I
+U, I, C, D
+C
+west, north, east, south, central
+west, north, east, south
