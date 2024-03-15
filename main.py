@@ -8,7 +8,12 @@ def line_to_array(line):
 
 #Union
 def U(g1, g2):
-    return list(set(g1) | set(g2))
+    temp = g1.copy()
+    for i in range(len(g2)):
+        if g2[i] not in temp:
+            temp.append(g2[i])
+    return temp
+    #return list(set(g1) | set(g2))
     
 #Intersection
 def I(g1, g2):
@@ -49,24 +54,28 @@ filedir = "demofile.txt"
 valid = False
 
 while not valid:
-    print("Welcome! Please enter the name of the file you want to input without the (.txt) extension.")
-    print("An empty field will default to 'demofile'!")
+    print("Bem-vindo! Por favor entre o nome do arquivo que contém as operações a serem realizadas! (sem incluir a extensão .txt)")
+    print("P.S Um campo vazio carregará o arquivo \'demofile.txt\'")
     temp_input = str(input(">")).replace(" ","")
     if temp_input == "": #Check for Empty
-        valid = True
-        break
+            if os.path.isfile(filedir):
+                valid = True
+                break
+            else:
+                print("! Parece que o arquivo de leitura padrão \'" + "demofile.txt" + "\' foi removido.")
+                print("! Por favor refira-se ao Readme para mais informações.")
     temp_input += ".txt"
     if os.path.isfile(temp_input):
         filedir = temp_input
         valid = True
     else:
-        print("Error! The file \'" + temp_input + "\' could not be found!")
+        print("Error! Não foi possível encontrar o arquivo \'" + temp_input + "\'!")
 
 
 f = open(filedir, "r")
 
 
-print("Showing results for \"" + filedir + "\"...")
+print("Mostrando resultados para o arquivo \"" + filedir + "\"...")
 #Treat lines
 lines = []
 lines = f.read().split("\n")
