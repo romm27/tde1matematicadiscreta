@@ -13,7 +13,7 @@ def U(g1, g2):
         if g2[i] not in temp:
             temp.append(g2[i])
     return temp
-    #return list(set(g1) | set(g2))
+    #return list(set(g1) | set(g2)) Wrong sorting!
     
 #Intersection
 def I(g1, g2):

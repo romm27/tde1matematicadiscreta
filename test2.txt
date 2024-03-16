@@ -1,10 +1,19 @@
-3
+7
+I
+A,E,I,O,U
+A,B,C,D,E,F,G
 D
-HOI4, COH2, SC2
-HOI4, EU4, CK3, Stellaris
+A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z
+A,E,I,O,U
+U
+1,3,7,5,8
+1,4,6,9,1
+D
+12,13,14,15,16,17,18,19
+19,16,13,10,7
+U
+Maine, New Hampshire, Massachusetts, Rhode Island, Connecticut, New York
+New Jersey, Pennsylvania, Delaware, Maryland, Virginia, North Carolina, South Carolina, Georgia, Florida
 I
-I
-U, I, C, D
-C
-west, north, east, south, central
-west, north, east, south
+Rubi, Marrom, Escarlate, Carmim, Morango, Framboesa, Melancia
+Carmesim, Vermelho-Vivo, Morango, Framboesa, Melancia
