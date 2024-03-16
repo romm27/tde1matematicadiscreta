@@ -13,4 +13,4 @@ maça,banana,melancia
 melão , melancia , arroz , feijão
 U
 china, japan, korea
-korea, United States, Russia
+korea, united states, russia
