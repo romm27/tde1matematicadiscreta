@@ -52,6 +52,8 @@ import os
 def line_to_array(line):
     values = []
     values = line.split(",")
+    for i in range(len(values)):
+        values[i] = values[i].strip()
     return values
 
 #Union
@@ -132,8 +134,7 @@ to_execute = int(lines.pop(0).strip())
 
 remove_list = ['\n', ' ']
 for l in range(len(lines)):
-    for c in range(len(remove_list)):
-        lines[l] = lines[l].replace(remove_list[c], "")
+    lines[l] = lines[l].strip(' ')
     
 
 
